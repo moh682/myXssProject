@@ -75,6 +75,9 @@ logoutbtn.addEventListener('click', function() {
 // Submit text Area
 document.getElementById('btn').addEventListener('click', async function() {
 	textarea = await document.getElementById('textarea').value;
+	console.log('she');
+	console.log(typeof textarea);
+	textarea = textarea !== '' ? filteringInput(textarea) : '';
 	let username = await JSON.parse(atob(getItem())).username;
 	var body = await JSON.stringify({
 		username,
@@ -121,6 +124,17 @@ function ValidatePassword(username, password) {
 	}
 	// if we ends here means the username exist and password correct
 	return true;
+}
+
+// Prevention
+function filteringInput(data) {
+	var splitData = data.split('');
+	for (let index = 0; index < splitData.length; index++) {
+		if (splitData[index] === '<' || splitData[index] === '>') {
+			delete splitData[index];
+		}
+	}
+	return splitData.join('');
 }
 
 // Creates User and Adds a Session id to him

