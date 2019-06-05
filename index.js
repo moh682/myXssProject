@@ -75,9 +75,7 @@ logoutbtn.addEventListener('click', function() {
 // Submit text Area
 document.getElementById('btn').addEventListener('click', async function() {
 	textarea = await document.getElementById('textarea').value;
-	console.log('she');
-	console.log(typeof textarea);
-	textarea = textarea !== '' ? filteringInput(textarea) : '';
+	textarea = textarea !== '' ? filteringInput(textarea) : ''; // Adding prevention
 	let username = await JSON.parse(atob(getItem())).username;
 	var body = await JSON.stringify({
 		username,
